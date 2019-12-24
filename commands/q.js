@@ -24,7 +24,7 @@ exports.run = (client,message,args) => {
         unitsIndexArray.push(key);
     });
 
-	const filePath = __dirname + '/../images/quiz/units/' + unitsIndexArray[unitSeed] + '.png';
+	const filePath = __dirname + '/../images/units/' + unitsIndexArray[unitSeed] + '.png';
 	const attachmentUrl = 'attachment://' + unitsIndexArray[unitSeed] + '.png';
 	const image = new Discord.Attachment(filePath);
 
