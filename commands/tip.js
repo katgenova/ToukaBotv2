@@ -1,4 +1,8 @@
+const path = require('path');
+
 exports.run = (client,message) => {
 
-    message.channel.send("" , {file: "./images/tip.gif"});
+	const tipGif = path.normalize(path.join(__dirname, '/../images/tip.gif'));
+
+    message.channel.send("" , {file: tipGif});
 }
