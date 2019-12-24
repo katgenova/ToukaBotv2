@@ -5,6 +5,9 @@ const path = require('path');
 exports.run = (client,message,args) => {
 	var unitsIndexArray = [];
 
+	var testPath = path.normalize(path.join(__dirname, '/../db/unitsIndex.json'));
+	console.log("Path:" + testPath);
+
 	var rawBase = fs.readFileSync(path.normalize(path.join(__dirname, '/../db/unitsIndex.json')));
 	var unitsIndex = JSON.parse(rawBase);
 
@@ -25,10 +28,8 @@ exports.run = (client,message,args) => {
         unitsIndexArray.push(key);
     });
 
-   console.log("Path:" + rawBase);
 
-
-	const filePath = path.normalize(path.join(__dirname, '/../images/units/', unitsIndexArray[unitSeed], '.png'));
+	const filePath = path.normalize(path.join(__dirname, '/../images/units/', unitsIndexArray[unitSeed])) + '.png';
 	const attachmentUrl = 'attachment://' + unitsIndexArray[unitSeed] + '.png';
 	const image = new Discord.Attachment(filePath);
 
