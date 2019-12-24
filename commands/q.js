@@ -5,16 +5,16 @@ const path = require('path');
 exports.run = (client,message,args) => {
 	var unitsIndexArray = [];
 
-	var rawBase = fs.readFileSync(path.normalize(path.join(__dirname, '/../db/unitsIndex.json'));
+	var rawBase = fs.readFileSync(path.normalize(path.join(__dirname, '/../db/unitsIndex.json')));
 	var unitsIndex = JSON.parse(rawBase);
 
-	var rawColour = fs.readFileSync(path.normalize(path.join(__dirname,'/../db/colourIndex.json'));
+	var rawColour = fs.readFileSync(path.normalize(path.join(__dirname,'/../db/colourIndex.json')));
 	var colourIndex = JSON.parse(rawColour);
 
-	var rawCost = fs.readFileSync(path.normalize(path.join(__dirname, '/../db/costIndex.json'));
+	var rawCost = fs.readFileSync(path.normalize(path.join(__dirname, '/../db/costIndex.json')));
 	var costIndex = JSON.parse(rawCost);
 
-	var rawType = fs.readFileSync(path.normalize(path.join(__dirname, '/../db/typeIndex.json'));
+	var rawType = fs.readFileSync(path.normalize(path.join(__dirname, '/../db/typeIndex.json')));
 	var typeIndex = JSON.parse(rawType);
 
 	var questionTypeSeed = Math.floor((Math.random() * 4) + 1);
