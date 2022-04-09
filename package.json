@@ -12,7 +12,7 @@
     "erlpack": "github:discordapp/erlpack",
     "libsodium-wrappers": "^0.7.6",
     "mathjs": "^5.10.3",
-    "moment": "^2.24.0"
+    "moment": "^2.29.2"
   },
   "scripts": {
     "start": "node index.js"
